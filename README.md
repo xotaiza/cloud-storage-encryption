@@ -15,6 +15,23 @@ This script is for **educational purposes only**, is **not certified** and is **
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
+# Theory
+
+![Diagram](./encryption_diagram.png)
+
+Python library for large file encription
+* [Fernet](https://cryptography.io/en/latest/fernet/)
+
+Python exaples to interact with Google Cloud Storage
+* [Read Write to Cloud Storage](https://cloud.google.com/appengine/docs/legacy/standard/python/googlecloudstorageclient/read-write-to-cloud-storage)
+
+Event Notification in Google Cloud Storage
+* [Create Commands](https://cloud.google.com/sdk/gcloud/reference/storage/buckets/notifications/create)
+
+Python example of a Pub/Sub PUSH Subscriber 
+* [pubsub-push](https://cloud.google.com/run/docs/triggering/pubsub-push)
+
+
 
 # Setup
 

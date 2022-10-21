@@ -1,6 +1,6 @@
 import base64
 import os
-import tk
+import encryption
 from dotenv import load_dotenv
 from datetime import datetime
 from flask import Flask, request
@@ -34,25 +34,25 @@ def index():
 
     file = json.loads(message)
     read_key_start = datetime.now()
-    key=tk.DecryptKMS(base64.b64decode(encrypted_key))
+    key=encryption.DecryptKMS(base64.b64decode(encrypted_key))
     read_key_end = datetime.now()
     read_key_time = read_key_end - read_key_start
     print("Rad Key millisecconds: " + str(read_key_time))
 
     read_file_start = datetime.now()
-    bytes = tk.ReadFromStorage(file["bucket"], file["name"])
+    bytes = encryption.ReadFromStorage(file["bucket"], file["name"])
     read_file_end = datetime.now()
     read_file_time = read_file_end - read_file_start
     print("Rad File millisecconds: " + str(read_file_time))
 
     encrypt_start = datetime.now()
-    tk.Encrypt(key,bytes,file["name"])
+    encryption.Encrypt(key,bytes,file["name"])
     encrypt_end = datetime.now()
     encrypt_time = encrypt_end - encrypt_start
     print("Encrypt millisecconds: " + str(encrypt_time))
 
     write_file_start = datetime.now()
-    tk.WriteToStorage(destination_bucket, file["name"])
+    encryption.WriteToStorage(destination_bucket, file["name"])
     write_file_end = datetime.now()
     write_file_time = write_file_end - write_file_start
     print("Write File millisecconds: " + str(write_file_time))
