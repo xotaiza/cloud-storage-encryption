@@ -1,0 +1,9 @@
+google-cloud-kms==2.12.1
+google-cloud-storage
+python-dotenv
+cryptography==38.0.1
+crcmod==1.7
+Flask==2.1.0
+pytest==7.0.1; python_version > "3.0"
+pytest==7.0.1; python_version < "3.0"
+gunicorn==20.1.0
