@@ -85,6 +85,6 @@ def CreateKey():
     print(str(EncryptKMS(str(Fernet.generate_key()))).replace('/', '\/'))
 
 
+
 if __name__ == '__main__':
     globals()[sys.argv[1]]()
-
